@@ -12,4 +12,5 @@ jobs:
       - name: Call bot check endpoint
         env:
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
-        run: curl -fsS -m 30 -H "Authorization: Bearer $CRON_SECRET" https://rub-kzt-bot.vercel.app/api/check
+        run: |
+          curl -fsS -m 30 -H "Authorization: Bearer $CRON_SECRET" https://rub-kzt-bot.vercel.app/api/check
